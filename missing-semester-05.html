@@ -1,0 +1,453 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Missing Semester 05 - Command-Line Environment · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="missing-semester-06.html" />
+    
+    
+    <link rel="prev" href="missing-semester-04.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="missing-semester-01.html">
+            
+                <a href="missing-semester-01.html">
+            
+                    
+                    Missing Semester 01 - The Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="missing-semester-02.html">
+            
+                <a href="missing-semester-02.html">
+            
+                    
+                    Missing Semester 02 - Shell Tools and Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="missing-semester-03.html">
+            
+                <a href="missing-semester-03.html">
+            
+                    
+                    Missing Semester 03 - Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="missing-semester-04.html">
+            
+                <a href="missing-semester-04.html">
+            
+                    
+                    Missing Semester 04 - Data Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="missing-semester-05.html">
+            
+                <a href="missing-semester-05.html">
+            
+                    
+                    Missing Semester 05 - Command-Line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="missing-semester-06.html">
+            
+                <a href="missing-semester-06.html">
+            
+                    
+                    Missing Semester 06 - Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="missing-semester-07.html">
+            
+                <a href="missing-semester-07.html">
+            
+                    
+                    Missing Semester 07 - Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="missing-semester-08.html">
+            
+                <a href="missing-semester-08.html">
+            
+                    
+                    Missing Semester 08 - Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="missing-semester-09.html">
+            
+                <a href="missing-semester-09.html">
+            
+                    
+                    Missing Semester 09 - Security and Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="missing-semester-10.html">
+            
+                <a href="missing-semester-10.html">
+            
+                    
+                    Missing Semester 10 - Potpourri
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="missing-semester-11.html">
+            
+                <a href="missing-semester-11.html">
+            
+                    
+                    Missing Semester 11 - QA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Missing Semester 05 - Command-Line Environment</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="missing-semester-05---command-line-environment">Missing Semester 05 - Command-Line Environment</h1>
+<p>Job control, terminal multiplexers, dotfiles, and remote machines &#x1F913;.</p>
+<ul>
+<li><p>&#x1F4F9; <a href="https://www.youtube.com/watch?v=e8BO_dYxk5c&amp;feature=emb_logo" target="_blank">YouTube Link</a></p>
+</li>
+<li><p>&#x270F;&#xFE0F; <a href="https://missing.csail.mit.edu/2020/command-line" target="_blank">Official Notes</a></p>
+</li>
+</ul>
+<h2 id="1-job-control">1. Job Control</h2>
+<ul>
+<li><p><code>SIGINT</code>: Term Interrupt from keyboard (<code>ctrl + c</code>)</p>
+</li>
+<li><p><code>SIGQUIT</code>: Core Quit from keyboard (<code>ctrl + \</code>)</p>
+</li>
+<li><p><code>SIGHUP</code>: Terminal line hangup (if you close your terminal, but things - e.g. servers - are still running in the background)</p>
+</li>
+<li><p><code>SIGKILL</code>: Term Kill signal - be vary, can lead to orphan processes</p>
+</li>
+<li><p><code>SIGTERM</code>: Term Termination signal</p>
+</li>
+<li><p><code>SIGSTOP</code>: Stop process <code>ctrl + z</code></p>
+</li>
+</ul>
+<p>We can then continue the paused job in the foreground or in the background using <code>fg</code> or <code>bg</code>.</p>
+<h3 id="misc">Misc</h3>
+<ul>
+<li><p><code>sleep 20</code>
+Put the process to sleep for 20 seconds.</p>
+</li>
+<li><p><code>jobs</code></p>
+</li>
+</ul>
+<p>The jobs command lists the unfinished jobs associated with the current terminal session.</p>
+<ul>
+<li><code>kill</code></li>
+</ul>
+<p>Sends a signal to a process, usually related to stopping the process, e.g. <code>SIGKILL</code> is <code>kill -9 [pid]</code>. All signals except for SIGKILL and SIGSTOP can be intercepted by the process to perform a clean exit.</p>
+<p>If you add <code>&amp;</code> to the end of a terminal command, it will start the execution in the background.</p>
+<p>&#x1F914; What does <code>ctr + d</code> do?</p>
+<p>It sends an EOF (end-of-file) marker, unless disabled by an option, this will close the current shell (EXIT).</p>
+<h2 id="2-terminal-multiplexers">2. Terminal Multiplexers</h2>
+<p>Terminal multiplexers like tmux allow you to multiplex terminal windows using panes and tabs so you can interact with multiple shell sessions.</p>
+<p>The most popular terminal multiplexer these days is <code>tmux</code>. To operate tmux you&apos;ll have to learn keybindings.</p>
+<p>tmux terminology:</p>
+<ul>
+<li><strong>sessions</strong>: a session is an independent workspace with one or more windows</li>
+<li><strong>windows</strong>: Equivalent to tabs in editors or browsers, they are visually separate parts of the same session</li>
+<li><strong>panes</strong>: Like vim splits, panes let you have multiple shells in the same visual display.</li>
+</ul>
+<p>&#x1F914; What is <code>emacs</code>?</p>
+<p>The extensible, customizable, self-documenting, real-time display editor (aka a powerful and highly customizable text editor)</p>
+<h2 id="3-dotfiles">3. Dotfiles</h2>
+<ul>
+<li><code>alias</code></li>
+</ul>
+<p>A shell alias is a short form for another command that your shell will replace automatically for you. You can alias a command to that same command with your favorite flags: e.g. <code>mv -i</code></p>
+<p>Examples of programs with dotfiles:</p>
+<ul>
+<li><code>bash</code> - ~/.bashrc, ~/.bash_profile</li>
+<li><code>git</code> - ~/.gitconfig</li>
+<li><code>vim</code> - ~/.vimrc and the ~/.vim folder</li>
+<li><code>ssh</code> - ~/.ssh/config</li>
+<li><code>tmux</code> - ~/.tmux.conf</li>
+</ul>
+<h2 id="4-remote-machines">4. Remote machines</h2>
+<ul>
+<li><code>ssh</code></li>
+</ul>
+<p>Stands for Secure shell and is a program for logging into a remote machine and for executing commands on a remote machine.</p>
+<ul>
+<li><code>ssh username@remote_host</code></li>
+</ul>
+<p>Connect to a remote server.</p>
+<ul>
+<li><code>ssh-keygen</code></li>
+</ul>
+<p>To generate <code>ssh</code> keys.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="missing-semester-04.html" class="navigation navigation-prev " aria-label="Previous page: Missing Semester 04 - Data Wrangling">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="missing-semester-06.html" class="navigation navigation-next " aria-label="Next page: Missing Semester 06 - Version Control (Git)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Missing Semester 05 - Command-Line Environment","level":"1.6","depth":1,"next":{"title":"Missing Semester 06 - Version Control (Git)","level":"1.7","depth":1,"path":"missing-semester-06.md","ref":"missing-semester-06.md","articles":[]},"previous":{"title":"Missing Semester 04 - Data Wrangling","level":"1.5","depth":1,"path":"missing-semester-04.md","ref":"missing-semester-04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-05.md","mtime":"2020-11-14T06:15:58.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T07:24:00.015Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,493 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Missing Semester 06 - Version Control (Git) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="missing-semester-07.html" />
+    
+    
+    <link rel="prev" href="missing-semester-05.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="missing-semester-01.html">
+            
+                <a href="missing-semester-01.html">
+            
+                    
+                    Missing Semester 01 - The Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="missing-semester-02.html">
+            
+                <a href="missing-semester-02.html">
+            
+                    
+                    Missing Semester 02 - Shell Tools and Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="missing-semester-03.html">
+            
+                <a href="missing-semester-03.html">
+            
+                    
+                    Missing Semester 03 - Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="missing-semester-04.html">
+            
+                <a href="missing-semester-04.html">
+            
+                    
+                    Missing Semester 04 - Data Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="missing-semester-05.html">
+            
+                <a href="missing-semester-05.html">
+            
+                    
+                    Missing Semester 05 - Command-Line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="missing-semester-06.html">
+            
+                <a href="missing-semester-06.html">
+            
+                    
+                    Missing Semester 06 - Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="missing-semester-07.html">
+            
+                <a href="missing-semester-07.html">
+            
+                    
+                    Missing Semester 07 - Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="missing-semester-08.html">
+            
+                <a href="missing-semester-08.html">
+            
+                    
+                    Missing Semester 08 - Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="missing-semester-09.html">
+            
+                <a href="missing-semester-09.html">
+            
+                    
+                    Missing Semester 09 - Security and Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="missing-semester-10.html">
+            
+                <a href="missing-semester-10.html">
+            
+                    
+                    Missing Semester 10 - Potpourri
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="missing-semester-11.html">
+            
+                <a href="missing-semester-11.html">
+            
+                    
+                    Missing Semester 11 - QA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Missing Semester 06 - Version Control (Git)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="missing-semester-06---version-control-git">Missing Semester 06 - Version Control (Git)</h1>
+<p>Version control systems (VCSs) are tools used to track changes to source code (or other collections of files and folders) &#x1F913;.</p>
+<ul>
+<li><p>&#x1F4F9; <a href="https://www.youtube.com/watch?v=2sjqTHE0zok&amp;t=1s" target="_blank">YouTube Link</a></p>
+</li>
+<li><p>&#x270F;&#xFE0F; <a href="https://missing.csail.mit.edu/2020/version-control/" target="_blank">Official Notes</a></p>
+</li>
+</ul>
+<p>I also learned a lot from <a href="https://alexwlchan.net/a-plumbers-guide-to-git/1-the-git-object-store/" target="_blank">Alex&apos; git workshop</a></p>
+<h2 id="git-data-model">Git Data Model</h2>
+<p>Git models the history of a collection of files and folders within some top-level directory (root directory, the directory in which you do <code>git init</code>) as a series of snapshots (commits).</p>
+<p>&#x1F914; <strong>git init</strong> creates the <code>.git</code> directory, which is where Git stores all of its information. If you delete everything except <code>.git</code>, you can still rebuild your entire repository.</p>
+<p>In git folders are <strong>trees</strong>, and files are <strong>blobs</strong>.</p>
+<p>In pseudocode:</p>
+<ul>
+<li>A <strong>file</strong> is a bunch (array) of bytes:</li>
+</ul>
+<p><code>type blob = array&lt;byte&gt;</code></p>
+<ul>
+<li>A <strong>directory</strong> contains named files and directories (mappings from the file/directory name to the actual contents - contents being another tree or a blob):</li>
+</ul>
+<p><code>type tree = map&lt;string, tree | blob&gt;</code></p>
+<ul>
+<li>A <strong>commit</strong> has parents, metadata, and the top-level tree:</li>
+</ul>
+<pre><code>type commit = struct {
+    parent: array&lt;commit&gt;
+    author: string
+    message: string
+    snapshot: tree
+}
+</code></pre><h2 id="objects-and-content-addressing">Objects and content-addressing</h2>
+<p>&#x1F914; What do we mean by content-addressable? It means that at the core of Git is a simple key-value data store. This means you can insert any kind of content into a Git repository, for which Git will hand you back a unique key you can use later to retrieve that content. <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects" target="_blank">More on git objects from Git Book</a></p>
+<p>&#x1F914; Also, the content of an object determines its ID (two files with the same content will have the same id!). The technical name for this is a content-addressable filesystem.</p>
+<ul>
+<li>An <strong>object</strong> is a blob, tree, or commit (see above):</li>
+</ul>
+<p><code>type object = blob | tree | commit</code></p>
+<p>In Git data store, all objects are content-addressed by their SHA-1 hash:</p>
+<pre><code>objects = map&lt;string, object&gt;
+
+def store(object):
+  // hash-object command
+    id = sha1(object)
+    objects[id] = object
+
+def load(id):
+    return objects[id]
+</code></pre><p>&#x1F914; A typical repo has thousands of objects, so Git breaks up objects into subdirectories to avoid any one directory becoming too large.</p>
+<p>&#x1F914; What is a hash function?</p>
+<p>A hash function is a function that takes in a big piece of data and turns it into a short string.</p>
+<h2 id="references">References</h2>
+<p>Branches and refs are human-readable labels to specific commits. &quot;HEAD&quot; is a reference to where we currently are.</p>
+<pre><code>references = map&lt;string, string&gt;
+
+// references are mutable
+def update_reference(name, id):
+    references[name] = id
+
+def read_reference(name):
+    return references[name]
+// cat-file
+def load_reference(name_or_id):
+    if name_or_id in references:
+        return load(references[name_or_id])
+    else:
+        return load(name_or_id)
+</code></pre><p>&#x1F4A1; At a high level, all git command line commands are just manipulations of references data or objects data:</p>
+<ul>
+<li><code>git add</code> is a combination of <code>hash-object</code> and <code>update-index</code>.</li>
+<li><code>git commit</code> comes from <code>write-tree</code>, <code>commit-tree</code>, and if you&#x2019;re on a branch, <code>update-ref</code></li>
+<li><code>git checkout</code> uses <code>update-ref</code> or <code>update-symbolic-ref</code></li>
+</ul>
+<p>If you <code>ls .git</code> in a new git repository:</p>
+<p><code>HEAD description info refs config hooks objects</code></p>
+<ul>
+<li>The <strong>HEAD</strong> file tells Git which branch we&#x2019;re working on</li>
+<li>The <strong>description</strong> file is only used by the GitWeb program &#x2013; it can be ignored.</li>
+<li>The <strong>info</strong> directory has a single file, exclude, which contains a list of per-repo ignores. Like a gitignore file, but it doesn&#x2019;t need to be checked in.</li>
+<li>The <strong>refs</strong> directory is empty</li>
+<li>The <strong>config</strong> file contains repo-specific configuration</li>
+<li>The <strong>hooks</strong> directory is used to store scripts that fire on certain events &#x2013; for example, running a linter before you commit</li>
+<li><p>The <strong>objects</strong> directory should be empty (aside from two more empty directories)</p>
+</li>
+<li><p>You&apos;ll get the <code>index</code> file once you&apos;ve added your changes to the staging area (a.k.a. <strong>index</strong>)</p>
+</li>
+</ul>
+<p>&#x1F4A1; Staging area is you telling git what changes should be included in the next snapshot.</p>
+<ul>
+<li><code>git cat-file -p [commit sha]</code></li>
+</ul>
+<p>Git&apos;s internal command to print out the contents of the commit (used to inspect objects stored in Git). With this command, we can restore our file even if we delete it &#x2013; because the object is kept safe in the <code>.git</code> directory:</p>
+<pre><code>$ rm animals.txt`
+$ git cat-file -p b13311e04762c322493e8562e6ce145a899ce570 &gt; animals.txt
+</code></pre><h2 id="misc-git-commands">Misc Git Commands</h2>
+<ul>
+<li><code>git commit -a</code></li>
+</ul>
+<p>To commit all the changes for files that are already tracked - so you can potentially skip <code>git add .</code></p>
+<p>&#x1F4A1; Think of merging as being the opposite of branching.</p>
+<p>&#x1F914; <code>git pull</code> === <code>git fetch &amp; git merge</code></p>
+<ul>
+<li><code>git add -p</code></li>
+</ul>
+<p>For interactively deciding what you want to add.</p>
+<ul>
+<li><code>git blame [filename]</code></li>
+</ul>
+<p>To see who made changes to the file.</p>
+<ul>
+<li><code>git show [commit sha]</code></li>
+</ul>
+<p>To see the changes made in the commit.</p>
+<ul>
+<li><code>git bisect</code></li>
+</ul>
+<p>Use binary search to find the commit that introduced a bug.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="missing-semester-05.html" class="navigation navigation-prev " aria-label="Previous page: Missing Semester 05 - Command-Line Environment">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="missing-semester-07.html" class="navigation navigation-next " aria-label="Next page: Missing Semester 07 - Debugging and Profiling">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Missing Semester 06 - Version Control (Git)","level":"1.7","depth":1,"next":{"title":"Missing Semester 07 - Debugging and Profiling","level":"1.8","depth":1,"path":"missing-semester-07.md","ref":"missing-semester-07.md","articles":[]},"previous":{"title":"Missing Semester 05 - Command-Line Environment","level":"1.6","depth":1,"path":"missing-semester-05.md","ref":"missing-semester-05.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-06.md","mtime":"2020-11-14T06:16:14.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T07:24:00.015Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

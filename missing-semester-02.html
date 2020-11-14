@@ -1,0 +1,556 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Missing Semester 02 - Shell Tools and Scripting · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="missing-semester-03.html" />
+    
+    
+    <link rel="prev" href="missing-semester-01.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="missing-semester-01.html">
+            
+                <a href="missing-semester-01.html">
+            
+                    
+                    Missing Semester 01 - The Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="missing-semester-02.html">
+            
+                <a href="missing-semester-02.html">
+            
+                    
+                    Missing Semester 02 - Shell Tools and Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="missing-semester-03.html">
+            
+                <a href="missing-semester-03.html">
+            
+                    
+                    Missing Semester 03 - Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="missing-semester-04.html">
+            
+                <a href="missing-semester-04.html">
+            
+                    
+                    Missing Semester 04 - Data Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="missing-semester-05.html">
+            
+                <a href="missing-semester-05.html">
+            
+                    
+                    Missing Semester 05 - Command-Line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="missing-semester-06.html">
+            
+                <a href="missing-semester-06.html">
+            
+                    
+                    Missing Semester 06 - Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="missing-semester-07.html">
+            
+                <a href="missing-semester-07.html">
+            
+                    
+                    Missing Semester 07 - Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="missing-semester-08.html">
+            
+                <a href="missing-semester-08.html">
+            
+                    
+                    Missing Semester 08 - Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="missing-semester-09.html">
+            
+                <a href="missing-semester-09.html">
+            
+                    
+                    Missing Semester 09 - Security and Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="missing-semester-10.html">
+            
+                <a href="missing-semester-10.html">
+            
+                    
+                    Missing Semester 10 - Potpourri
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="missing-semester-11.html">
+            
+                <a href="missing-semester-11.html">
+            
+                    
+                    Missing Semester 11 - QA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Missing Semester 02 - Shell Tools and Scripting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="missing-semester-02---shell-tools-and-scripting">Missing Semester 02 - Shell Tools and Scripting</h1>
+<p>More on Shell, scripting, variables, functions, arguments and, most importantly, the tools!</p>
+<ul>
+<li><p>&#x1F4F9; <a href="https://www.youtube.com/watch?v=kgII-YWo3Zw" target="_blank">YouTube Link</a></p>
+</li>
+<li><p>&#x270F;&#xFE0F; <a href="https://missing.csail.mit.edu/2020/shell-tools/" target="_blank">Official Notes</a></p>
+</li>
+</ul>
+<h2 id="assigning-variables">Assigning Variables</h2>
+<ul>
+<li><code>foo=bar</code></li>
+</ul>
+<p>Declaring a variable.</p>
+<ul>
+<li><code>echo $foo</code></li>
+</ul>
+<p>Accessing a variable.</p>
+<p>&#x2757; Spaces are reserved for separating the arguments (<code>foo = bar</code> is an invalid declaration).</p>
+<h2 id="quotes">Quotes</h2>
+<p>For literal strings, double or single quotes are equivalent.</p>
+<p>But, variables won&apos;t expand inside single quotes (but yes in double-quotes)</p>
+<ul>
+<li><code>&apos;Value is $foo&apos;</code> &#x26D4;</li>
+<li><code>&quot;Value is $foo&quot;</code> &#x2705;</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<p>Function example: (<code>mcd</code> - create and <code>cd</code> into that folder)</p>
+<pre><code>mcd () {
+  mkdir -p &quot;$1&quot;
+  cd &quot;$1&quot;
+}
+</code></pre><ul>
+<li><code>source [function name]</code></li>
+</ul>
+<p>Execute commands from a file in the current shell.</p>
+<ul>
+<li><code>source path/to/file</code></li>
+</ul>
+<p>Evaluate the contents of a given file.</p>
+<h2 id="special-variables">Special Variables</h2>
+<ul>
+<li><code>$0</code></li>
+</ul>
+<p>The name of the script we are running.</p>
+<ul>
+<li><code>$1</code></li>
+</ul>
+<p>Access the 1st argument.</p>
+<ul>
+<li><code>$#</code></li>
+</ul>
+<p>The number of arguments we are giving to the command (<code>length</code>).</p>
+<ul>
+<li><code>%_</code></li>
+</ul>
+<p>The value of the last argument.</p>
+<ul>
+<li><code>!!</code></li>
+</ul>
+<p>Run the last command again (often used with <code>sudo</code>).</p>
+<ul>
+<li><code>$?</code></li>
+</ul>
+<p>Read the value of standard error. (<code>false</code> produces <code>error</code> code 1).</p>
+<ul>
+<li><code>$$</code></li>
+</ul>
+<p>Process id.</p>
+<ul>
+<li><code>$@</code></li>
+</ul>
+<p>Expands to all the arguments (spread).</p>
+<ul>
+<li><code>;</code></li>
+</ul>
+<p>To concacenate different commands in the same line.</p>
+<h2 id="short-circuit-operators">Short-circuit Operators</h2>
+<ul>
+<li><p><code>false || echo &quot;Oops, fail&quot;</code> (prints Oops, fail)</p>
+</li>
+<li><p><code>true || echo &quot;Will not be printed&quot;</code> (prints nothing)</p>
+</li>
+<li><p><code>true &amp;&amp; echo &quot;Things went well&quot;</code> (prints Things went well)</p>
+</li>
+<li><p><code>false &amp;&amp; echo &quot;Will not be printed&quot;</code> (prints nothing)</p>
+</li>
+<li><p><code>true ; echo &quot;This will always run&quot;</code> (prints This will always run)</p>
+</li>
+<li><p><code>false ; echo &quot;This will always run&quot;</code> (prints This will always run)</p>
+</li>
+</ul>
+<h2 id="process-substitution">Process Substitution</h2>
+<p>Process substitution feeds the output of a process (or processes) into the stdin of another process.</p>
+<p><code>cat &lt;(ls) &lt;(ls ..)</code></p>
+<p>&lt;( CMD ) will execute CMD and place the output in a temporary file and substitute the &lt;() with that file&#x2019;s name.</p>
+<h2 id="test">Test</h2>
+<p>Evaluate condition.</p>
+<p>If it is true, returns 0 exit status, otherwise returns 1.</p>
+<ul>
+<li><code>test -z \$GIT_BRANCH</code></li>
+</ul>
+<p>Test if given variable is empty.</p>
+<ul>
+<li><code>test -e filename</code></li>
+</ul>
+<p>Test if file exists.</p>
+<h2 id="globbing">Globbing</h2>
+<p>Globbing or filename expansion: Filename expansion means expanding filename patterns or templates containing special characters.</p>
+<p>For example, <code>example.???</code> might expand to <code>example.001</code> and/or <code>example.txt</code>.</p>
+<ul>
+<li><p><code>touch foo{1,2,10}</code></p>
+</li>
+<li><p><code>touch {foo,bar}/{a..j}</code></p>
+</li>
+</ul>
+<h2 id="shell-functions-vs-scripts">Shell Functions vs Scripts</h2>
+<ul>
+<li><p>Functions have to be in the same language as the shell, while scripts can be written in any language. This is why including a shebang for scripts is important.</p>
+</li>
+<li><p>Functions are loaded once when their definition is read. Scripts are loaded every time they are executed.</p>
+</li>
+<li><p>Functions are executed in the current shell environment whereas scripts execute in their own process</p>
+</li>
+</ul>
+<h2 id="misc">Misc</h2>
+<ul>
+<li><code>shebang</code></li>
+</ul>
+<p>The first line in the script that will inform the shell how to run this program.</p>
+<ul>
+<li><code>foo=$(pwd)</code></li>
+</ul>
+<p>Saves the output of the <code>pwd</code> command in the foo variable: <code>echo &quot;We are in $(pwd)</code></p>
+<ul>
+<li><code>/dev/null</code></li>
+</ul>
+<p>If you redirect output there, it will be discarded (this is so for tidying up your output)</p>
+<ul>
+<li><code>ctrl + r</code></li>
+</ul>
+<p>Backward search (press ctrl + r again to go through the results)</p>
+<h2 id="shell-tools">Shell Tools</h2>
+<ul>
+<li><code>brew info [tool]</code></li>
+</ul>
+<p>&#x1F44D; To look it up on Homebrew.</p>
+<ul>
+<li><p><strong>shellcheck</strong> (For bash script debugging)</p>
+</li>
+<li><p><strong>imageMagick</strong> (Tools and libraries to manipulate images in many formats)</p>
+</li>
+<li><p><strong>ffmpeg</strong> (Play, record, convert, and stream audio and video)</p>
+</li>
+<li><p><strong>find</strong></p>
+<ul>
+<li><p><code>find . -name src -type d</code></p>
+</li>
+<li><p><code>find . -mtime -1</code> (modification time in the last day )</p>
+</li>
+<li><p><code>find . -naame &quot;\*.tmp&quot; -exec rm {} \;</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>fd</strong> (Simple, fast and user-friendly alternative to find)</p>
+</li>
+<li><p><strong>ripgrep</strong> (For more colorful grep.)</p>
+<ul>
+<li><p><code>rg -C 5 emoji src</code> (Get 5 lines of context.)</p>
+</li>
+<li><p><code>history | grep convert</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>fzf</strong> (Type fzf to search over all your files.)</p>
+</li>
+<li><p><strong>tree</strong> (Display directories as trees (with optional color/HTML output))</p>
+</li>
+<li><p><strong>broot</strong> (New way to see and navigate directory trees)</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="missing-semester-01.html" class="navigation navigation-prev " aria-label="Previous page: Missing Semester 01 - The Shell">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="missing-semester-03.html" class="navigation navigation-next " aria-label="Next page: Missing Semester 03 - Editors (Vim)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Missing Semester 02 - Shell Tools and Scripting","level":"1.3","depth":1,"next":{"title":"Missing Semester 03 - Editors (Vim)","level":"1.4","depth":1,"path":"missing-semester-03.md","ref":"missing-semester-03.md","articles":[]},"previous":{"title":"Missing Semester 01 - The Shell","level":"1.2","depth":1,"path":"missing-semester-01.md","ref":"missing-semester-01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-02.md","mtime":"2020-11-14T07:07:57.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T07:24:00.015Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

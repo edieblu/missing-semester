@@ -1,0 +1,8 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:edieblu/missing-semester.git",
+  "author": "EVA <edie.blues@gmail.com>",
+  "license": "MIT"
+}

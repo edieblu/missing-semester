@@ -1,0 +1,509 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Missing Semester 07 - Debugging and Profiling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="missing-semester-08.html" />
+    
+    
+    <link rel="prev" href="missing-semester-06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="missing-semester-01.html">
+            
+                <a href="missing-semester-01.html">
+            
+                    
+                    Missing Semester 01 - The Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="missing-semester-02.html">
+            
+                <a href="missing-semester-02.html">
+            
+                    
+                    Missing Semester 02 - Shell Tools and Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="missing-semester-03.html">
+            
+                <a href="missing-semester-03.html">
+            
+                    
+                    Missing Semester 03 - Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="missing-semester-04.html">
+            
+                <a href="missing-semester-04.html">
+            
+                    
+                    Missing Semester 04 - Data Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="missing-semester-05.html">
+            
+                <a href="missing-semester-05.html">
+            
+                    
+                    Missing Semester 05 - Command-Line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="missing-semester-06.html">
+            
+                <a href="missing-semester-06.html">
+            
+                    
+                    Missing Semester 06 - Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="missing-semester-07.html">
+            
+                <a href="missing-semester-07.html">
+            
+                    
+                    Missing Semester 07 - Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="missing-semester-08.html">
+            
+                <a href="missing-semester-08.html">
+            
+                    
+                    Missing Semester 08 - Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="missing-semester-09.html">
+            
+                <a href="missing-semester-09.html">
+            
+                    
+                    Missing Semester 09 - Security and Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="missing-semester-10.html">
+            
+                <a href="missing-semester-10.html">
+            
+                    
+                    Missing Semester 10 - Potpourri
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="missing-semester-11.html">
+            
+                <a href="missing-semester-11.html">
+            
+                    
+                    Missing Semester 11 - QA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Missing Semester 07 - Debugging and Profiling</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="missing-semester-07---debugging-and-profiling">Missing Semester 07 - Debugging and Profiling</h1>
+<p>On logging, ANSI escape codes, debuggers, profilers, and resource monitoring.</p>
+<ul>
+<li><p>&#x1F4F9; <a href="https://www.youtube.com/watch?v=l812pUnKxME&amp;" target="_blank">YouTube Link</a></p>
+</li>
+<li><p>&#x270F;&#xFE0F; <a href="https://missing.csail.mit.edu/2020/debugging-profiling/" target="_blank">Official Notes</a></p>
+</li>
+</ul>
+<h2 id="debugging">Debugging</h2>
+<h3 id="1-prinf-debugging-aka-consolelog">1. prinf debugging a.k.a. console.log()</h3>
+<h3 id="2-logging">2. Logging</h3>
+<p>Which is better because:</p>
+<ul>
+<li>you can log to files, sockets, or even remote servers instead of standard output</li>
+<li>you can add severity levels (+ color coding)</li>
+<li>logging more information</li>
+</ul>
+<p>&#x1F914; <strong>How do you output colors in the terminal?</strong>
+<strong>ANSI escape codes</strong> are standardized commands used to manipulate the behavior and appearance of the text in a terminal or terminal emulator.</p>
+<p>ANSI escape sequence is a sequence of ASCII characters, the first two of which are the ASCII &quot;Escape&quot; and the left-bracket character &quot;[&quot;. The character or characters following the escape and left-bracket characters specify an alphanumeric code that controls a keyboard or display function.</p>
+<p>The most basic terminals have a set of 8 different colors:</p>
+<ul>
+<li>Black: <code>\u001b[30m</code></li>
+<li>Red: <code>\u001b[31m</code></li>
+<li>Green: <code>\u001b[32m</code></li>
+<li>Yellow: <code>\u001b[33m</code></li>
+<li>Blue: <code>\u001b[34m</code></li>
+<li>Magenta: <code>\u001b[35m</code></li>
+<li>Cyan: <code>\u001b[36m</code></li>
+<li><p>White: <code>\u001b[37m</code></p>
+</li>
+<li><p>Reset: <code>\u001b[0m</code></p>
+</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li><code>print &quot;\u001b[30m A \u001b[31m B \u001b[32m C \u001b[33m D \u001b[0m&quot;</code></li>
+</ul>
+<p>This will print letters A (in black), B (pink), C (green), D (yellow).</p>
+<h3 id="3-third-party-logs">3. Third party logs</h3>
+<ul>
+<li><code>var/log/system.log</code></li>
+</ul>
+<p>Or more commonly, the system log (<code>/var/log/system.log</code>):</p>
+<ul>
+<li><code>log show</code></li>
+</ul>
+<p>&#x1F914; You can also see system logs in:</p>
+<p><code>Finder &gt; Applications &gt; Utilities &gt; Console.</code></p>
+<ul>
+<li><code>log show --last 10s</code></li>
+</ul>
+<p>Show logs for the past 10 seconds.</p>
+<ul>
+<li><code>logger &quot;hello logs&quot;</code></li>
+</ul>
+<p>Add stuff to the system log (using a shell program called <code>logger</code>).</p>
+<ul>
+<li><code>log show --last 1m | grep hello</code></li>
+</ul>
+<p>Find that log (the one you just added)</p>
+<h3 id="&#x1F914;-more-log-files-on-macos">&#x1F914; More log files on macOS</h3>
+<ul>
+<li>System Log Folder: <code>/var/log</code></li>
+<li>System Log: <code>/var/log/system.log</code></li>
+<li>Mac Analytics Data: <code>/var/log/DiagnosticMessages</code></li>
+<li>System Application Logs: <code>/Library/Logs</code></li>
+<li>System Reports: <code>/Library/Logs/DiagnosticReports</code></li>
+<li>User Application Logs: <code>~/Library/Logs</code> (in other words, <code>/Users/NAME/Library/Logs</code>)</li>
+<li>User Reports: <code>~/Library/Logs/DiagnosticReports</code> (in other words, <code>/Users/NAME/Library/Logs/DiagnosticReports</code>)</li>
+</ul>
+<h3 id="4-debuggers">4. Debuggers</h3>
+<p>Debuggers are programs that let you interact with the execution of a program and allow you to:</p>
+<ul>
+<li>Halt execution of the program when it reaches a certain line.</li>
+<li>Step through the program one instruction at a time.</li>
+<li>Inspect values of variables after the program crashed.</li>
+<li>Conditionally halt the execution when a given condition is met.</li>
+</ul>
+<h3 id="5-static-analysis">5. Static analysis</h3>
+<p>Static analysis programs take source code as input and analyze it using coding rules to reason about its correctness (linters), e.g. <code>shellcheck</code> for shell scripts, <code>prettier</code> for HTML, CSS, JS.</p>
+<ul>
+<li><a href="https://github.com/analysis-tools-dev/static-analysis" target="_blank">JavaScript static analysis tools</a></li>
+<li><a href="https://github.com/caramelomartins/awesome-linters" target="_blank">And a bunch more linters</a></li>
+</ul>
+<h2 id="profiling">Profiling</h2>
+<h3 id="1-timing">1. Timing</h3>
+<p>Similarly to the debugging case, in many scenarios, it can be enough to just print the time it took your code between two points.</p>
+<ul>
+<li><strong>real time</strong>: elapsed time from start to finish of the program, including the time taken by other processes and time taken while blocked</li>
+<li><strong>user time</strong>: Amount of time spent in the CPU running user code</li>
+<li><strong>system time</strong>: Amount of time spent in the CPU running kernel code</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li><code>time curl https://missing.csail.mit.edu &amp;&gt; /dev/null</code></li>
+</ul>
+<p>Will output how long in real, user, and system time it takes to <code>curl</code> that specific url.</p>
+<h3 id="2-profilers">2. Profilers</h3>
+<p>Most of the time, when people refer to profilers, they actually mean CPU profilers.</p>
+<ul>
+<li><strong>tracing</strong> profilers: tracing profilers keep a record of every function call your program makes</li>
+<li><strong>sampling</strong> profilers: probe your program periodically (commonly every millisecond) and record the program&#x2019;s stack</li>
+</ul>
+<p>&#x1F914; <a href="https://winderresearch.com/logging-vs-tracing-vs-monitoring/" target="_blank">Logging vs Tracing vs Monitoring</a></p>
+<ul>
+<li>We use <strong>logging</strong> to represent state transformations within an application. When things go wrong, we need logs to establish what change in the state caused the error.</li>
+<li>A <strong>trace</strong> represents a single user&#x2019;s journey through an entire stack of an application. It is often used for optimization purposes. For example, you would use it to establish little used part of a stack or bottlenecks within specific parts of the stack.</li>
+<li><strong>Instrumenting</strong> an application and <strong>monitoring</strong> the results represents the use of a system. It is most often used for diagnostic purposes. For example, we would use monitoring systems to alert developers when the system is not operating &#x201C;normally&#x201D;.</li>
+</ul>
+<p>&#x1F914; Also this <a href="https://twitter.com/mipsytipsy/status/911711540008628224" target="_blank">Twitter thread</a>.</p>
+<p>There&apos;s also line profiler, memory profiler, event profiling.</p>
+<h3 id="3-resource-monitoring">3. Resource monitoring</h3>
+<ul>
+<li><code>htop</code></li>
+</ul>
+<p>A process viewer.</p>
+<ul>
+<li><code>du -h [path]</code></li>
+</ul>
+<p>List the sizes of a directory and any subdirectories in human-readable form (i.e. auto-selecting the appropriate unit for each size)</p>
+<ul>
+<li><code>lsof</code></li>
+</ul>
+<p>Lists file information about files opened by processes.</p>
+<ul>
+<li><code>lsof path/to/file</code></li>
+</ul>
+<p>Find the processes that have a given file open.</p>
+<ul>
+<li><code>lsof -i :port</code></li>
+</ul>
+<p>Find the process that opened a local internet port.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="missing-semester-06.html" class="navigation navigation-prev " aria-label="Previous page: Missing Semester 06 - Version Control (Git)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="missing-semester-08.html" class="navigation navigation-next " aria-label="Next page: Missing Semester 08 - Metaprogramming">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Missing Semester 07 - Debugging and Profiling","level":"1.8","depth":1,"next":{"title":"Missing Semester 08 - Metaprogramming","level":"1.9","depth":1,"path":"missing-semester-08.md","ref":"missing-semester-08.md","articles":[]},"previous":{"title":"Missing Semester 06 - Version Control (Git)","level":"1.7","depth":1,"path":"missing-semester-06.md","ref":"missing-semester-06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-07.md","mtime":"2020-11-14T06:16:26.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T07:24:00.015Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
