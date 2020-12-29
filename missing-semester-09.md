@@ -27,7 +27,7 @@ Roughly 40 bits is considered a strong password (80 bits for offline attacks and
 
 Encryption is a way of using mathematics to scramble the content of a digital file or message so that it can only be decrypted and read by someone who has a particular piece of information, such as a password or an encryption key.
 
-🤔 How to break passwords?
+#### 🤔 How to break passwords?
 
 - credential Stuffing (purchasing credentials from breached sites)
 - phishing (man-in-the-middle attack)
