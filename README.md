@@ -6,4 +6,6 @@ Here you will find the lecture notes for [the Missing Semester](https://missing.
 
 The notes were originally taken in the fall of 2020, as part of the includeJS study group and were originally published on [includeJS](https://includejs.dev/tags/missing-semester/).
 
-For any comments or suggestions, you can find me on [Twitter](https://twitter.com/GirlsCodeMK).🎉
+View on [GitHub](https://github.com/edieblu/missing-semester) 🤓
+
+For any comments or suggestions, you can find me on [Twitter](https://twitter.com/GirlsCodeMK). 🎉
