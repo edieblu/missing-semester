@@ -290,14 +290,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="missing-semester-09---security-and-cryptography">Missing Semester 09 - Security and Cryptography</h1>
-<p>On entropy, hash functions, key derivation functions, symmetric and asymmetric cryptography &#x1F4AA;.</p>
-<ul>
-<li><p>&#x1F4F9; <a href="https://www.youtube.com/watch?v=tjwobAmnKTo&amp;feature=emb_logo" target="_blank">YouTube Link</a></p>
-</li>
-<li><p>&#x270F;&#xFE0F; <a href="https://missing.csail.mit.edu/2020/security/" target="_blank">Official Notes</a></p>
-</li>
-</ul>
+                                <p>Video: <a href="https://www.youtube.com/watch?v=tjwobAmnKTo&amp;feature=emb_logo" target="_blank">https://www.youtube.com/watch?v=tjwobAmnKTo&amp;feature=emb_logo</a>
+Notes: <a href="https://missing.csail.mit.edu/2020/security/" target="_blank">https://missing.csail.mit.edu/2020/security/</a></p>
 <h2 id="entropy">Entropy</h2>
 <p>Entropy is a measure of randomness.</p>
 <p>log2(#possibilities):</p>
@@ -305,21 +299,30 @@
 <li>1 bit for a coin flip</li>
 <li>2.6 (log2(6))</li>
 </ul>
-<p>Roughly 40 bits is considered a strong password (80 bits for offline attacks and to be really secure).</p>
-<h4 id="&#x1F914;-what-is-encryption">&#x1F914; What is encryption?</h4>
+<p>Roughly 40 bits is considered a strong password (80 bits for offline attacks and to be really secure)</p>
+<p>&#x1F914; What is encryption?</p>
 <p>Encryption is a way of using mathematics to scramble the content of a digital file or message so that it can only be decrypted and read by someone who has a particular piece of information, such as a password or an encryption key.</p>
+<p>&#x1F914; How to break passwords?</p>
+<ul>
+<li>credential Stuffing (purchasing credentials from breached sites)</li>
+<li>phishing (man-in-the-middle attack)</li>
+<li>keystroke logging (malware saves everything you entered)</li>
+<li>local discovery (when you physically find someone&apos;s password)</li>
+<li>extortion</li>
+<li>password spray (guessing using common passwords)</li>
+<li>brute force (penetrating networks to extract files)</li>
+</ul>
 <h2 id="hash-functions">Hash functions</h2>
 <p>Hash functions are functions that map a variable amount of data (input) into a fixed output.</p>
-<p>sha1(bytes) -&gt; 160 bits, typically rendered as a hexadecimal number, 40 digits long. (like in git for content address storage).</p>
-<p>SHA-1 is no longer considered a strong cryptographic hash function.</p>
-<p><code>hash(value: array&lt;byte&gt;) -&gt; vector&lt;byte, N&gt;</code> (for some fixed N)</p>
+<p>sha1(bytes) -&gt; 160 bits, typically rendered as a hexadecimal number, 40 digits long. (like in git for content address storage). SHA-1 is no longer considered a strong cryptographic hash function.</p>
+<p>hash(value: array<byte>) -&gt; vector<byte, n=""> (for some fixed N)</byte,></byte></p>
 <p>Hash functions have a number of properties:</p>
 <ul>
 <li>Deterministic: the same input always generates the same output.</li>
 <li>Non-invertible: it is hard to figure out the input based on the output</li>
 <li>Collision resistant: it&apos;s hard to find two different inputs that produce the same output</li>
 </ul>
-<h4 id="&#x1F914;-what-is-a-checksum">&#x1F914; What is a checksum?</h4>
+<h3 id="&#x1F914;-what-is-a-checksum">&#x1F914; What is a checksum?</h3>
 <p>A checksum is a sequence of numbers and letters used to check data for errors. If you know the checksum of an original file, you can use a checksum utility to confirm your copy is identical.</p>
 <p>Linux distributions often provide checksums so you can verify your Linux ISO properly downloaded before burning it to a disc or putting it on a USB drive.</p>
 <p>Typical algorithms used for this include MD5, SHA-1, SHA-256, and SHA-512.</p>
@@ -328,41 +331,36 @@
 <h2 id="key-derivation-functions-kdfs">Key derivation functions (KDFs)</h2>
 <p>KDFs are similar to hask functions, but on top of that they are (purposefully) slow to compute. Used for password applications (to slow down brute-force attacks)</p>
 <p>A key derivation function is an algorithm that generates a cryptographic key from a password or a master key.</p>
-<h4 id="&#x1F914;-what-is-a-cryptographic-key">&#x1F914; What is a cryptographic key?</h4>
-<p>A cryptographic key is data that is used to lock or unlock cryptographic functions such as encryption, authentication and authorization. Keys are typically designed to be both random and reasonably long such that they are difficult to guess.</p>
+<p>&#x1F914; What is a cryptographic key?
+A cryptographic key is data that is used to lock or unlock cryptographic functions such as encryption, authentication and authorization. Keys are typically designed to be both random and reasonably long such that they are difficult to guess.</p>
 <h2 id="symmetric-key-cryptography">Symmetric key cryptography</h2>
 <p>In symmetric-key cryptography (alias secret key cryptography) the same key is used to encrypt and decrypt the data.</p>
-<pre><code>keygen() -&gt; key  (a randomized function that proudces the key)
-
-encrypt(plaintext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the ciphertext)
-decrypt(ciphertext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the plaintext aka data)
-</code></pre><p>Meaning that given a ciphertext, you can&apos;t figure out the plaintext without the key.</p>
+<p>keygen() -&gt; key (a randomized function that proudces the key)</p>
+<p>encrypt(plaintext: array<byte>, key) -&gt; array<byte> (the ciphertext)
+decrypt(ciphertext: array<byte>, key) -&gt; array<byte> (the plaintext aka data)</byte></byte></byte></byte></p>
+<p>Meaning that given a ciphertext, you can&apos;t figure out the plaintext without the key.</p>
 <p>Correctness property: if you decrypt the cipher with a key, it will give you back the original plaintext.</p>
 <p>Used for encrypting files for storage on un-encrypted cloud service. They are somewhat less useful for sending messages from one computer to another because both ends of the communication channel must possess the key and must keep it secure</p>
-<h4 id="&#x1F914;-what-is-salt">&#x1F914; What is salt?</h4>
+<p>&#x1F914; What is salt?</p>
 <p>Salt is/are random data that is added to data before it is passed to a hash function. It is a cryptographic technique that makes hash nodes more difficult to reverse.</p>
 <h2 id="asymmetric-key-cryptography">Asymmetric key cryptography</h2>
 <p>A matching public/private key pair whereby anyone can encrypt with the public key, but only those who hold the private key can decrypt.</p>
-<pre><code>keygen() -&gt; (public key, private key)  (this function is randomized)
-
-encrypt(plaintext: array&lt;byte&gt;, public key) -&gt; array&lt;byte&gt;  (the ciphertext)
-decrypt(ciphertext: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the plaintext)
-
-sign(message: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the signature)
-verify(message: array&lt;byte&gt;, signature: array&lt;byte&gt;, public key) -&gt; boolean  (whether or not the signature is valid)
-</code></pre><ul>
+<p>keygen() -&gt; (public key, private key) (this function is randomized)</p>
+<p>encrypt(plaintext: array<byte>, public key) -&gt; array<byte> (the ciphertext)
+decrypt(ciphertext: array<byte>, private key) -&gt; array<byte> (the plaintext)</byte></byte></byte></byte></p>
+<p>sign(message: array<byte>, private key) -&gt; array<byte> (the signature)
+verify(message: array<byte>, signature: array<byte>, public key) -&gt; boolean (whether or not the signature is valid)</byte></byte></byte></byte></p>
+<ul>
 <li>hard to forge (without the private key)</li>
 <li>correctness</li>
 </ul>
 <p>When you run ssh-keygen, it generates an asymmetric key pair, public_key, private_key.</p>
-<h4 id="&#x1F914;-what-is-pgp">&#x1F914; What is PGP?</h4>
+<p>&#x1F914; What is PGP?</p>
 <p>Pretty Good Privacy (PGP) is an encryption program that provides cryptographic privacy and authentication for data communication. Used by ProtonMail</p>
 <p><a href="https://myshadow.org/resources/the-key-concept" target="_blank">Video explanation</a></p>
-<h3 id="further-resources">Further resources:</h3>
-<ul>
-<li>Website: <a href="https://tacticaltech.org/" target="_blank">Tactical Tech Initiative</a></li>
-<li>Podcast: <a href="https://inteltechniques.com/" target="_blank">Intel Techniques by Michael Bazzell </a></li>
-</ul>
+<p>Further resources:
+Website: <a href="https://tacticaltech.org/" target="_blank">Tactical Tech Initiative</a>
+Podcast: <a href="https://inteltechniques.com/" target="_blank">Intel Techniques by Michael Bazzell </a></p>
 
                                 
                                 </section>
@@ -406,7 +404,7 @@ verify(message: array&lt;byte&gt;, signature: array&lt;byte&gt;, public key) -&g
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Missing Semester 09 - Security and Cryptography","level":"1.10","depth":1,"next":{"title":"Missing Semester 10 - Potpourri","level":"1.11","depth":1,"path":"missing-semester-10.md","ref":"missing-semester-10.md","articles":[]},"previous":{"title":"Missing Semester 08 - Metaprogramming","level":"1.9","depth":1,"path":"missing-semester-08.md","ref":"missing-semester-08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-09.md","mtime":"2020-11-14T06:16:53.474Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T07:24:00.015Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Missing Semester 09 - Security and Cryptography","level":"1.10","depth":1,"next":{"title":"Missing Semester 10 - Potpourri","level":"1.11","depth":1,"path":"missing-semester-10.md","ref":"missing-semester-10.md","articles":[]},"previous":{"title":"Missing Semester 08 - Metaprogramming","level":"1.9","depth":1,"path":"missing-semester-08.md","ref":"missing-semester-08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"missing-semester-09.md","mtime":"2020-12-29T09:42:26.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T09:42:41.765Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
